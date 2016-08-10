@@ -1,0 +1,5 @@
+# cartfile contents
+github "watson-developer-cloud/ios-sdk"
+#github "slackhq/SlackTextViewController"
+github "SwiftyJSON/SwiftyJSON"
+github "Alamofire/Alamofire" ~> 3.4
