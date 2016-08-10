@@ -9,13 +9,12 @@
 import Foundation
 import Alamofire
 
-
+var context = ""
 
 @objc class WatsonConvo : NSObject {
     var save_context = ""
     var answer = ""
-    var context = ""
-    
+  
     func sendToConvo(input: String, chatViewController:Chat) {
         
     let url = "http://Node-Workflow-Hub.mybluemix.net/mobileV2"
@@ -32,9 +31,9 @@ import Alamofire
         
         do {
             self.answer = (JSON["text"] as? String)!
-            self.context = (JSON["context"] as? String)!
+            context = (JSON["context"] as? String)!
             print(self.answer)
-            print(self.context)
+            print(context)
             chatViewController.addWatsonChat(self.answer, waiting: false);
           
             }

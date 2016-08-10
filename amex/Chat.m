@@ -173,7 +173,7 @@
 
 //  [self addWatsonChat:@"Give me a sec..." waiting:YES];
   
-  [self addWatsonChat:@"Hello, I’m Watson.\n\nWhat question do you have for me today?" waiting:NO];
+//  [self addWatsonChat:@"Hello, I’m Watson.\n\nWhat question do you have for me today?" waiting:NO];
 //  [self addWatsonChat:@"Hello, I’m Watson.\n\nWhat question do you have for me today?" waiting:NO];
 //  [self addWatsonChat:@"Hello, I’m Watson.\n\nWhat question do you have for me today?" waiting:NO];
 //  [self addWatsonChat:@"Hello, I’m Watson.\n\nWhat question do you have for me today?" waiting:NO];
@@ -192,6 +192,7 @@
 //      [self addWatsonChat:watsonResponse waiting:NO];
 //    });
 //  }
+  [self sendUserText:@"Hi!"];
 }
 
 
