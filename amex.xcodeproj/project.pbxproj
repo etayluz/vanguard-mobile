@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74235DA11D5BD25500606A9D /* WatsonRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74235DA01D5BD25500606A9D /* WatsonRecording.swift */; };
 		748D17C21D5AB1770072FBAA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D17C11D5AB1770072FBAA /* Alamofire.framework */; };
 		748D17C41D5AB1860072FBAA /* AlchemyDataNewsV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D17C31D5AB1860072FBAA /* AlchemyDataNewsV1.framework */; };
 		748D17C61D5AB18F0072FBAA /* AlchemyLanguageV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D17C51D5AB18F0072FBAA /* AlchemyLanguageV1.framework */; };
@@ -108,6 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		74235DA01D5BD25500606A9D /* WatsonRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatsonRecording.swift; sourceTree = "<group>"; };
 		748D17C11D5AB1770072FBAA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		748D17C31D5AB1860072FBAA /* AlchemyDataNewsV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyDataNewsV1.framework; path = Carthage/Build/iOS/AlchemyDataNewsV1.framework; sourceTree = SOURCE_ROOT; };
 		748D17C51D5AB18F0072FBAA /* AlchemyLanguageV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyLanguageV1.framework; path = Carthage/Build/iOS/AlchemyLanguageV1.framework; sourceTree = SOURCE_ROOT; };
@@ -277,6 +279,7 @@
 				B49A26941D4A912100BB1813 /* AccountOverview.m */,
 				B4413F7B1D503C45006907C2 /* Chat.h */,
 				B4413F7C1D503C45006907C2 /* Chat.m */,
+				74235DA01D5BD25500606A9D /* WatsonRecording.swift */,
 				B4413F811D5049E0006907C2 /* TextToSpeech.swift */,
 				748D17F81D5AE4930072FBAA /* WatsonConvo.swift */,
 				B49A26961D4A912100BB1813 /* Main.storyboard */,
@@ -412,6 +415,7 @@
 				B49A26951D4A912100BB1813 /* AccountOverview.m in Sources */,
 				748D17F91D5AE4930072FBAA /* WatsonConvo.swift in Sources */,
 				B4413F821D5049E0006907C2 /* TextToSpeech.swift in Sources */,
+				74235DA11D5BD25500606A9D /* WatsonRecording.swift in Sources */,
 				B4413F7D1D503C45006907C2 /* Chat.m in Sources */,
 				B49A26921D4A912100BB1813 /* AppDelegate.m in Sources */,
 				B49A268F1D4A912100BB1813 /* main.m in Sources */,

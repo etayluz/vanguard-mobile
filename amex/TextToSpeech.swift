@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@objc class SpeechToText: NSObject {
+@objc class SpeechtoText: NSObject {
   /**
    Repair the WAV header for a WAV-formatted audio file produced by Watson Text to Speech.
    

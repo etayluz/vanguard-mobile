@@ -227,8 +227,11 @@
 
 -(void)changeFirstResponder
 {
-  if (self.done) {
+
+/*
+if (self.done) {
     //    self.topTextField.text = @"";
+
 #if (TARGET_OS_SIMULATOR)
     self.entranceCount--;
     if (self.entranceCount == 0) {
@@ -279,6 +282,7 @@
                                   Denormalize(self.scrollView.frame.size.width),
                                   799 - 33);
   }
+*/
 }
 
 - (void)dismissKeyboard
@@ -730,7 +734,7 @@
 {
   NSError *error;
   NSMutableData *audioData = [data mutableCopy];
-  SpeechToText *speechToText = [SpeechToText new];
+  SpeechtoText *speechToText = [SpeechtoText new];
   [speechToText repairWAVHeader:audioData];
   self.player = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
   self.player.delegate = self;
