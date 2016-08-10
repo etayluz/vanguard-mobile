@@ -558,11 +558,20 @@
       else {
         buttonWidth = 119;
       }
+      
       optionButton.frame = Frame(leftOffset, self.topOffset + Denormalize(message.frame.size.height) + 33, buttonWidth, 35);
       //      optionButton.backgroundColor = [UIColor redColor];
       optionButton.layer.cornerRadius = 18;
       [optionButton addTarget:self action:@selector(tappedOptionButton:) forControlEvents:UIControlEventTouchUpInside];
       [optionButton setTitle:option forState:UIControlStateNormal];
+      
+      [optionButton sizeToFit];
+      
+      optionButton.frame = Frame(leftOffset,
+                                 self.topOffset + Denormalize(message.frame.size.height) + 33,
+                                 Denormalize(optionButton.frame.size.width) + 50,
+                                 35);
+
       [optionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
       optionButton.backgroundColor = [UIColor colorWithRed:0.333 green:0.588 blue:0.902 alpha:1.00];
       if ([option isEqualToString:@"Learn More"]) {
@@ -571,7 +580,7 @@
       //  ShowViewBorders(self.micButton1);
       [self.scrollView addSubview:optionButton];
       
-      leftOffset += 100;
+      leftOffset += optionButton.frame.size.width + 30;
     }
     
     if (isWaiting == NO) {
