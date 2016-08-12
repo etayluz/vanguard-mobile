@@ -10,6 +10,9 @@ import Foundation
 import Alamofire
 
 var context = ""
+var cvalue1 = ""
+var cvalue2 = ""
+var cvalue3 = "test"
 
 @objc class WatsonConvo : NSObject {
     var save_context = ""
@@ -17,9 +20,9 @@ var context = ""
   
     func sendToConvo(input: String, chatViewController:Chat) {
         
-    let url = "http://Node-Workflow-Hub.mybluemix.net/mobileV2"
+    let url = "http://Node-Workflow-Hub.mybluemix.net/mobileV2-1"
     
-    let requestParameters =  ["input" : input, "workspace_id" : "1d311c0b-0ad2-4b17-9253-dede37ef3e51", "fname" : "Mary", "lname" : "Smith", "nname" : "Mary", "phone" : "", "email" : "","context" : context ]
+        let requestParameters =  ["input" : input, "workspace_id" : "1d311c0b-0ad2-4b17-9253-dede37ef3e51", "fname" : "Mary", "lname" : "Smith", "nname" : "Mary", "cvalue1" : cvalue1, "cvalue2" : cvalue2, "cvalue3" : cvalue3, "context" : context ]
     
     print (requestParameters)
     
