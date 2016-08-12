@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 var context = ""
-var cvalue1 = ""
-var cvalue2 = ""
-var cvalue3 = "test"
+var cvalue1 = "Susan G Komen"
+var cvalue2 = "Red Cross"
+var cvalue3 = "Thrivent Builds"
 
 @objc class WatsonConvo : NSObject {
     var save_context = ""
