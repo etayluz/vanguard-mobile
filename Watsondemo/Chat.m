@@ -441,6 +441,12 @@ if (self.done) {
     return;
   }
   
+  NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+  if ([text rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+  {
+    text = [NSString stringWithFormat:@"$%@",text];
+  }
+  
   AVSpeechBoundary speechBoundary;
   [self.synth stopSpeakingAtBoundary:speechBoundary];
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
@@ -498,7 +504,7 @@ if (self.done) {
     userIcon.image = [UIImage imageNamed:@"User"];
     [self.scrollView addSubview:userIcon];
     
-    self.topOffset += Denormalize(messageBouble.frame.size.height) + 70;
+    self.topOffset += Denormalize(messageBouble.frame.size.height) + 90;
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width,Normalize(self.topOffset + 100));
     if (Denormalize(self.scrollView.frame.size.height) < self.topOffset) {
@@ -713,8 +719,10 @@ if (self.done) {
       [optionButton removeFromSuperview];
     }
     else {
-      if ([selectedOptionButton.titleLabel.text isEqualToString:@"Apply"]) {
-        [self addForm];
+      if ([selectedOptionButton.titleLabel.text isEqualToString:@"Click to view summary plan"]) {
+        [self.overview setImage:[UIImage imageNamed:@"SummaryPlan"] forState:UIControlStateNormal];
+        self.overview.userInteractionEnabled = NO;
+        [self tappedBackButton];
       } else if ([selectedOptionButton.titleLabel.text isEqualToString:@"Submit"]) {
         [self addWatsonChat:@"Congratulations!\n\nYou’ve been approved! Your card will be mailed to you in 3-5 business days. In the meantime, learn about your instant account number - you can begin using a $1,000 line of credit at Delta.com today." waiting:NO];
       } else {
@@ -722,14 +730,23 @@ if (self.done) {
       }
     }
     
+    UIImageView *userIcon = [UIImageView new];
+    userIcon.frame = Frame(725 - 60, self.topOffset - 90, 70, 70);
+    userIcon.contentMode = UIViewContentModeScaleAspectFill;
+    userIcon.image = [UIImage imageNamed:@"User"];
+    userIcon.alpha = 0;
+    [self.scrollView addSubview:userIcon];
+    
     [UIView animateWithDuration:0.5 animations:^{
-      optionButton.frame = Frame(Denormalize(self.scrollView.frame.size.width - optionButton.frame.size.width - 50),
+      optionButton.frame = Frame(Denormalize(self.scrollView.frame.size.width - optionButton.frame.size.width - 120),
                                  Denormalize(optionButton.frame.origin.y),
                                  Denormalize(optionButton.frame.size.width),
                                  Denormalize(optionButton.frame.size.height));
       optionButton.backgroundColor = [UIColor whiteColor];
       [optionButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
       optionButton.userInteractionEnabled = NO;
+      userIcon.alpha = 1;
+      
     }];
   }
 }
