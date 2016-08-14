@@ -45,7 +45,6 @@
 		748D17F71D5AB76B0072FBAA /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 748D17C11D5AB1770072FBAA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B44140081D53B146006907C2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44140061D53B146006907C2 /* Fabric.framework */; };
 		B44140091D53B146006907C2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44140071D53B146006907C2 /* Crashlytics.framework */; };
-		B4E7C7991D60EF5C0033A587 /* SanFranciscoText-RegularG1.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */; };
 		B4E7C79C1D61059C0033A587 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C79B1D61059C0033A587 /* AppDelegate.m */; };
 		B4E7C79F1D6105A30033A587 /* AccountOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C79E1D6105A30033A587 /* AccountOverview.m */; };
 		B4E7C7A21D6105AB0033A587 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C7A11D6105AB0033A587 /* Chat.m */; };
@@ -57,6 +56,7 @@
 		B4E7C7DB1D61072E0033A587 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7D91D6107170033A587 /* Info.plist */; };
 		B4E7C7E01D6107690033A587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7DC1D6107690033A587 /* LaunchScreen.storyboard */; };
 		B4E7C7E11D6107690033A587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7DE1D6107690033A587 /* Main.storyboard */; };
+		B4E7C7E31D611C900033A587 /* SanFranciscoText-RegularG1.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7E21D611C900033A587 /* SanFranciscoText-RegularG1.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -132,7 +132,6 @@
 		B44140061D53B146006907C2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		B44140071D53B146006907C2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		B49A268A1D4A912100BB1813 /* WatsonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatsonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-RegularG1.otf"; path = "../../Downloads/SanFrancisco/SanFranciscoText-RegularG1.otf"; sourceTree = "<group>"; };
 		B4E7C79A1D61059C0033A587 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Watsondemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		B4E7C79B1D61059C0033A587 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Watsondemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		B4E7C79D1D6105A30033A587 /* AccountOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountOverview.h; path = Watsondemo/AccountOverview.h; sourceTree = SOURCE_ROOT; };
@@ -148,6 +147,8 @@
 		B4E7C7D91D6107170033A587 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Watsondemo/Info.plist; sourceTree = SOURCE_ROOT; };
 		B4E7C7DD1D6107690033A587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Watsondemo/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		B4E7C7DF1D6107690033A587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Watsondemo/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		B4E7C7E21D611C900033A587 /* SanFranciscoText-RegularG1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-RegularG1.otf"; path = "Watsondemo/Fonts/SanFranciscoText-RegularG1.otf"; sourceTree = "<group>"; };
+		B4E7C7E41D611CA00033A587 /* SanFranciscoText-RegularG1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-RegularG1.otf"; path = "Watsondemo/Fonts/SanFranciscoText-RegularG1.otf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +239,7 @@
 		B49A26811D4A912100BB1813 = {
 			isa = PBXGroup;
 			children = (
+				B4E7C7E21D611C900033A587 /* SanFranciscoText-RegularG1.otf */,
 				B49A268C1D4A912100BB1813 /* WatsonDemo */,
 				B49A268B1D4A912100BB1813 /* Products */,
 			);
@@ -267,7 +269,6 @@
 				B4E7C7A71D6105BF0033A587 /* WatsonConvo.swift */,
 				B4E7C7DC1D6107690033A587 /* LaunchScreen.storyboard */,
 				B4E7C7DE1D6107690033A587 /* Main.storyboard */,
-				B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */,
 				B4E7C7A91D6105CB0033A587 /* Assets.xcassets */,
 				B4E7C7D91D6107170033A587 /* Info.plist */,
 				B44140061D53B146006907C2 /* Fabric.framework */,
@@ -291,6 +292,7 @@
 		B4E7C7971D60EE6E0033A587 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B4E7C7E41D611CA00033A587 /* SanFranciscoText-RegularG1.otf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -357,7 +359,7 @@
 				B4E7C7AA1D6105CB0033A587 /* Assets.xcassets in Resources */,
 				B4E7C7E11D6107690033A587 /* Main.storyboard in Resources */,
 				B4E7C7E01D6107690033A587 /* LaunchScreen.storyboard in Resources */,
-				B4E7C7991D60EF5C0033A587 /* SanFranciscoText-RegularG1.otf in Resources */,
+				B4E7C7E31D611C900033A587 /* SanFranciscoText-RegularG1.otf in Resources */,
 				B4E7C7DB1D61072E0033A587 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
