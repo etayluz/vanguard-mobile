@@ -22,7 +22,7 @@ var cvalue3 = "Thrivent Builds"
         
     let url = "http://Node-Workflow-Hub.mybluemix.net/mobileV2-1"
     
-        let requestParameters =  ["input" : input, "workspace_id" : "1d311c0b-0ad2-4b17-9253-dede37ef3e51", "fname" : "Mary", "lname" : "Smith", "nname" : "Mary", "cvalue1" : cvalue1, "cvalue2" : cvalue2, "cvalue3" : cvalue3, "context" : context ]
+    let requestParameters =  ["input" : input, "workspace_id" : "4ab9b05f-8572-483f-ac23-6f9541a7ab49", "fname" : "Mary", "lname" : "Smith", "nname" : "Mary", "cvalue1" : cvalue1, "cvalue2" : cvalue2, "cvalue3" : cvalue3, "context" : context ]
     
     print (requestParameters)
     
