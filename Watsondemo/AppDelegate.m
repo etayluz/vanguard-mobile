@@ -29,10 +29,10 @@
 
   [Fabric with:@[[Crashlytics class]]];
 
-  UIViewController *viewController = [[AccountOverview alloc] init];
+  UIViewController *viewController = [[Chat alloc] init];
   
 #if (TARGET_OS_SIMULATOR)
-  viewController = [[Chat alloc] init];
+//  viewController = [[Chat alloc] init];
 #endif
   
   UINavigationController *navigationController =

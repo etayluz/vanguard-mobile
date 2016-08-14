@@ -36,7 +36,7 @@
 @property int            animationIndex;
 @property UIButton *overview;
 @property UIButton *backButton;
-
+@property int scrollViewHeight;
 @end
 
 @implementation Chat
@@ -69,11 +69,12 @@
   
 
   
-  self.topOffset = 0;
+  self.topOffset = 40;
   self.scrollView = [UIScrollView new];
   self.scrollView.showsVerticalScrollIndicator = NO;
-  self.scrollView.frame = Frame(0,110,768,820);
-  self.scrollView.backgroundColor = [UIColor clearColor];
+  self.scrollViewHeight = 858;
+  self.scrollView.frame = Frame(0,72,768,self.scrollViewHeight);
+//  self.scrollView.backgroundColor = [UIColor greenColor];
   [self.view addSubview:self.scrollView];
   
   UIImageView *overlay = [UIImageView new];
@@ -263,7 +264,7 @@
   if (self.topOffset > 550) {
     self.scrollView.frame = Frame(0,Denormalize(self.scrollView.frame.origin.y),
                                   Denormalize(self.scrollView.frame.size.width),
-                                  1024/2);
+                                  600);
     CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height + 20);
     [self.scrollView setContentOffset:bottomOffset animated:YES];
   }
@@ -272,11 +273,11 @@
 -(void)changeFirstResponder
 {
 
-/*
-if (self.done) {
-    //    self.topTextField.text = @"";
 
-#if (TARGET_OS_SIMULATOR)
+if (self.done) {
+    self.topTextField.text = @"";
+
+#if 0//(TARGET_OS_SIMULATOR)
     self.entranceCount--;
     if (self.entranceCount == 0) {
       self.entranceCount = 2;
@@ -324,9 +325,9 @@ if (self.done) {
     [self.bottomTextField resignFirstResponder];
     self.scrollView.frame = Frame(0,Denormalize(self.scrollView.frame.origin.y),
                                   Denormalize(self.scrollView.frame.size.width),
-                                  799 - 33);
+                                  self.scrollViewHeight);
   }
-*/
+
 }
 
 - (void)dismissKeyboard
@@ -335,6 +336,15 @@ if (self.done) {
   self.bottomTextField.text = @"Tell me how I can help.";
   self.topTextField.text = @"";
   self.done = NO;
+  self.scrollView.frame = Frame(0,Denormalize(self.scrollView.frame.origin.y),
+                                Denormalize(self.scrollView.frame.size.width),
+                                self.scrollViewHeight);
+  
+  if (Denormalize(self.scrollView.frame.size.height) < self.topOffset) {
+    CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
+    [self.scrollView setContentOffset:bottomOffset animated:YES];
+  }
+  
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
     self.done = YES;
   });
@@ -618,7 +628,7 @@ if (self.done) {
     
 
     
-    int leftOffset = 60;
+    int leftOffset = 120;
     self.optionButtons = [NSMutableArray new];
     for (NSString *option in options) {
       
@@ -632,7 +642,7 @@ if (self.done) {
         buttonWidth = 119;
       }
       
-      optionButton.frame = Frame(leftOffset, self.topOffset + Denormalize(message.frame.size.height) + 33, buttonWidth, 35);
+      optionButton.frame = Frame(leftOffset, self.topOffset + Denormalize(message.frame.size.height) + 55, buttonWidth, 35);
       //      optionButton.backgroundColor = [UIColor redColor];
       optionButton.layer.cornerRadius = 18;
       [optionButton addTarget:self action:@selector(tappedOptionButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -641,12 +651,12 @@ if (self.done) {
       [optionButton sizeToFit];
       
       optionButton.frame = Frame(leftOffset,
-                                 self.topOffset + Denormalize(message.frame.size.height) + 33,
+                                 self.topOffset + Denormalize(message.frame.size.height) + 50,
                                  Denormalize(optionButton.frame.size.width) + 50,
                                  35);
 
       [optionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-      optionButton.backgroundColor = [UIColor colorWithRed:0.333 green:0.588 blue:0.902 alpha:1.00];
+      optionButton.backgroundColor = [UIColor colorWithRed:0.867 green:0.102 blue:0.196 alpha:1.00];
       if ([option isEqualToString:@"Learn More"]) {
         optionButton.userInteractionEnabled = NO;
       }
@@ -657,7 +667,7 @@ if (self.done) {
     }
     
     if (isWaiting == NO) {
-      self.topOffset += Denormalize(messageBouble.frame.size.height) + 70;
+      self.topOffset += Denormalize(messageBouble.frame.size.height) + 105;
     }
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width,Normalize(self.topOffset + 100));
@@ -697,6 +707,7 @@ if (self.done) {
 }
 
 -(void)tappedOptionButton:(UIButton*)selectedOptionButton {
+  [self dismissKeyboard];
   for (UIButton *optionButton in self.optionButtons) {
     if (optionButton != selectedOptionButton) {
       [optionButton removeFromSuperview];
@@ -712,7 +723,7 @@ if (self.done) {
     }
     
     [UIView animateWithDuration:0.5 animations:^{
-      optionButton.frame = Frame(Denormalize(self.scrollView.frame.size.width - optionButton.frame.size.width),
+      optionButton.frame = Frame(Denormalize(self.scrollView.frame.size.width - optionButton.frame.size.width - 50),
                                  Denormalize(optionButton.frame.origin.y),
                                  Denormalize(optionButton.frame.size.width),
                                  Denormalize(optionButton.frame.size.height));
