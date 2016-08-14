@@ -34,6 +34,9 @@
 @property NSTimer       *timer;
 @property UIImageView   *waitAnimation;
 @property int            animationIndex;
+@property UIButton *overview;
+@property UIButton *backButton;
+
 @end
 
 @implementation Chat
@@ -56,10 +59,20 @@
 //  ShowViewBorders(self.accountButton);
   [self.view addSubview:self.accountButton];
   
-  self.topOffset = 50;
+  self.backButton = [UIButton new];
+  self.backButton.frame = Frame(0, 0, 60, 80);
+  [self.backButton addTarget:self action:@selector(tappedBackButton) forControlEvents:UIControlEventTouchUpInside];
+  self.backButton.backgroundColor = [UIColor clearColor];
+//  ShowViewBorders(self.backButton);
+  [self.view addSubview:self.backButton];
+  
+  
+
+  
+  self.topOffset = 0;
   self.scrollView = [UIScrollView new];
   self.scrollView.showsVerticalScrollIndicator = NO;
-  self.scrollView.frame = Frame(0,130 + 25,700,799 - 33);
+  self.scrollView.frame = Frame(0,110,768,820);
   self.scrollView.backgroundColor = [UIColor clearColor];
   [self.view addSubview:self.scrollView];
   
@@ -96,9 +109,9 @@
   dateLabel.text = [NSString stringWithFormat:@"Today, %ld:%02ld %@", (long)hour, (long)minute, AmPm];
   dateLabel.frame = Frame(Denormalize(self.scrollView.frame.size.width * 0.46), self.topOffset, 200, 30);
   dateLabel.textColor = [UIColor whiteColor];
-  [self.scrollView addSubview:dateLabel];
+//  [self.scrollView addSubview:dateLabel];
   
-  self.topOffset += 70;
+//  self.topOffset += 70;
   
   self.bottomTextField = [UITextField new];
   self.bottomTextField.backgroundColor = [UIColor whiteColor];
@@ -115,7 +128,7 @@
   [self.view addSubview:self.bottomTextField];
   
   self.topTextBox = [UIImageView new];
-  self.topTextBox.frame = Frame(0, 0, 768, 44);
+  self.topTextBox.frame = Frame(0, 0, 768, 42);
   self.topTextBox.image = [UIImage imageNamed:@"Textbox"];
   self.topTextBox.contentMode = UIViewContentModeScaleAspectFill;
   self.topTextBox.alpha = 1;
@@ -193,8 +206,38 @@
 //    });
 //  }
   [self sendUserText:@"Hi!"];
+  
+  self.overview = [UIButton new];
+  
+  self.overview.frame = Frame(0, 0, 769, 973);
+  [self.overview setImage:[UIImage imageNamed:@"Overview"] forState:UIControlStateNormal];
+  [self.overview setImage:[UIImage imageNamed:@"Overview"] forState:UIControlStateSelected];
+  [self.overview setImage:[UIImage imageNamed:@"Overview"] forState:UIControlStateHighlighted];
+  [self.overview addTarget:self action:@selector(moveOverview) forControlEvents:UIControlEventTouchUpInside];
+  
+  [self.view addSubview:self.overview];
+  [self.view bringSubviewToFront:self.overview];
+
 }
 
+- (void)tappedBackButton
+{
+  [self.view bringSubviewToFront:self.overview];
+  
+  [UIView animateWithDuration:0.3 animations:^{
+    self.overview.frame = Frame(0, 0, 769, 973);
+  }];
+  
+  
+}
+
+-(void)moveOverview
+{
+  [UIView animateWithDuration:0.3 animations:^{
+    self.overview.frame = Frame(-769, 0, 769, 973);
+  }];
+  
+}
 
 -(void)tappedSendButton
 {
@@ -395,7 +438,7 @@ if (self.done) {
     UIView *messageBouble = [UIView new];
     messageBouble.alpha = 0;
     messageBouble.backgroundColor = [UIColor colorWithRed:0.969 green:0.973 blue:0.976 alpha:1.00];
-    messageBouble.layer.cornerRadius = Normalize(25);
+//    messageBouble.layer.cornerRadius = Normalize(25);
     messageBouble.frame = Frame(padding, self.topOffset, 1080 - padding * 2, 0);
     [self.scrollView addSubview:messageBouble];
     
@@ -404,7 +447,7 @@ if (self.done) {
     UILabel *message = [UILabel new];
     message.frame = Frame(padding, 7, 550, 0);
     message.numberOfLines = 0;
-    message.font = [UIFont systemFontOfSize:Normalize(20)];
+    message.font = [UIFont fontWithName:@"SanFranciscoText-RegularG1" size:17];
     message.text = text;
     
     NSMutableParagraphStyle *style  = [[NSMutableParagraphStyle alloc] init];
@@ -421,22 +464,28 @@ if (self.done) {
     message.backgroundColor = [UIColor clearColor];
     [messageBouble addSubview:message];
     
-    messageBouble.frame = CGRectMake(Normalize(768 - 68 - width),
+    messageBouble.frame = CGRectMake(Normalize(768 - 125 - width),
                                      messageBouble.frame.origin.y,
                                      Normalize(width),
                                      message.frame.size.height + Normalize(20));
     
     UIView *corner = [UIView new];
     corner.alpha = 0;
-    int dimension = 30;
+    int dimension = 10;
     corner.frame = CGRectMake(messageBouble.frame.size.width - dimension/2,
-                              messageBouble.frame.size.height - dimension/2,
+                              10,
                               dimension,
                               dimension);
-    corner.backgroundColor = [UIColor colorWithRed:0.969 green:0.973 blue:0.976 alpha:1.00];
+    corner.backgroundColor = [UIColor whiteColor];
     corner.transform = CGAffineTransformMakeRotation(M_PI_2/2);
     
     [messageBouble addSubview:corner];
+    
+    UIImageView *userIcon = [UIImageView new];
+    userIcon.frame = Frame(725 - 60, self.topOffset, 70, 70);
+    userIcon.contentMode = UIViewContentModeScaleAspectFill;
+    userIcon.image = [UIImage imageNamed:@"User"];
+    [self.scrollView addSubview:userIcon];
     
     self.topOffset += Denormalize(messageBouble.frame.size.height) + 70;
     
@@ -485,20 +534,38 @@ if (self.done) {
   NSArray *options = [optionsString componentsSeparatedByString:@","];
   
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-    int padding = 50;
+    int padding = 0;
+    
+    UIImageView *watsonIcon = [UIImageView new];
+    watsonIcon.frame = Frame(25, self.topOffset, 70, 70);
+    watsonIcon.contentMode = UIViewContentModeScaleAspectFill;
+    watsonIcon.image = [UIImage imageNamed:@"Watson"];
+    [self.scrollView addSubview:watsonIcon];
     
     UIView *messageBouble = [UIView new];
     messageBouble.alpha = 0;
-    messageBouble.backgroundColor = [UIColor clearColor];
-    messageBouble.layer.cornerRadius = Normalize(20);
-    messageBouble.frame = Frame(padding, self.topOffset, 600, 0);
+    messageBouble.backgroundColor = [UIColor whiteColor];
+//    messageBouble.layer.cornerRadius = Normalize(20);
+    messageBouble.frame = Frame(150, self.topOffset, 600, 0);
     [self.scrollView addSubview:messageBouble];
+    
+    
+    UIView *corner = [UIView new];
+    corner.alpha = 1;
+    int dimension = 10;
+    corner.frame = CGRectMake(-dimension/ 2,
+                              13,
+                              dimension,
+                              dimension);
+    corner.backgroundColor = [UIColor whiteColor];
+    corner.transform = CGAffineTransformMakeRotation(M_PI_2/2);
+    [messageBouble addSubview:corner];
     
     if (isWaiting) {
       self.waitingMessage = messageBouble;
     }
     
-    UIView *blueLine = [UIView new];
+//    UIView *blueLine = [UIView new];
     
     if (isWaiting) {
       self.waitAnimation = [UIImageView new];
@@ -510,39 +577,40 @@ if (self.done) {
       [messageBouble addSubview:self.waitAnimation];
     } else {
       [self.timer invalidate];
-      blueLine.alpha = 0;
-      blueLine.backgroundColor = [UIColor colorWithRed:0.486 green:0.780 blue:1.000 alpha:1.00];
-      blueLine.layer.cornerRadius = Normalize(5);
-      blueLine.frame = Frame(8, 16, 5, 24);
-      [messageBouble addSubview:blueLine];
+//      blueLine.alpha = 0;
+//      blueLine.backgroundColor = [UIColor colorWithRed:0.486 green:0.780 blue:1.000 alpha:1.00];
+//      blueLine.layer.cornerRadius = Normalize(5);
+//      blueLine.frame = Frame(8, 16, 5, 24);
+//      [messageBouble addSubview:blueLine];
     }
     
     padding = 20;
     
     UILabel *message = [UILabel new];
     message.frame = Frame(padding,
-                          10,
+                          5,
                           Denormalize(messageBouble.frame.size.width) - padding * 2,
                           0);
     message.numberOfLines = 0;
-    message.font = [UIFont systemFontOfSize:Normalize(20)];
+    message.font = [UIFont fontWithName:@"SanFranciscoText-RegularG1" size:17];
     message.text = text;
     
     NSMutableParagraphStyle *style  = [[NSMutableParagraphStyle alloc] init];
     style.minimumLineHeight = 30.f;
     style.maximumLineHeight = 30.f;
-    NSDictionary *attributtes = @{NSParagraphStyleAttributeName : style,};
+    NSDictionary *attributtes = @{NSParagraphStyleAttributeName : style,
+                                  NSFontAttributeName : [UIFont fontWithName:@"SanFranciscoText-RegularG1" size:17]};
     message.attributedText = [[NSAttributedString alloc] initWithString:text
                                                              attributes:attributtes];
     
     [message sizeToFit];
     int width = Denormalize(message.frame.size.width) + 45;
-    message.textColor = [UIColor whiteColor];
+    message.textColor = [UIColor blackColor];
     message.clipsToBounds = YES;
     message.backgroundColor = [UIColor clearColor];
     [messageBouble addSubview:message];
     
-    messageBouble.frame = CGRectMake(45,
+    messageBouble.frame = CGRectMake(120,
                                      messageBouble.frame.origin.y,
                                      Normalize(width),
                                      message.frame.size.height + Normalize(20));
@@ -599,11 +667,13 @@ if (self.done) {
     
     [UIView animateWithDuration:0.3 animations:^{
       messageBouble.alpha = 1;
-      blueLine.alpha = 1;
+//      blueLine.alpha = 1;
     }];
     if (isWaiting == NO) {
       [self getWatsonVoice:text];
     }
+    
+    
     
     //    AVSpeechUtterance *utterance = [AVSpeechUtterance
     //                                    speechUtteranceWithString:text];

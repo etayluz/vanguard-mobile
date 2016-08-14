@@ -76,6 +76,7 @@
 		B49A26981D4A912100BB1813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49A26961D4A912100BB1813 /* Main.storyboard */; };
 		B49A269A1D4A912100BB1813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49A26991D4A912100BB1813 /* Assets.xcassets */; };
 		B49A269D1D4A912100BB1813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49A269B1D4A912100BB1813 /* LaunchScreen.storyboard */; };
+		B4E7C7991D60EF5C0033A587 /* SanFranciscoText-RegularG1.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -166,6 +167,7 @@
 		B49A26991D4A912100BB1813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B49A269C1D4A912100BB1813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B49A269E1D4A912100BB1813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-RegularG1.otf"; path = "../../Downloads/SanFrancisco/SanFranciscoText-RegularG1.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 		B49A268C1D4A912100BB1813 /* amex */ = {
 			isa = PBXGroup;
 			children = (
+				B4E7C7971D60EE6E0033A587 /* Fonts */,
 				748D17C01D5AB12F0072FBAA /* Frameworks */,
 				B49A26901D4A912100BB1813 /* AppDelegate.h */,
 				B49A26911D4A912100BB1813 /* AppDelegate.m */,
@@ -282,6 +285,7 @@
 				74235DA01D5BD25500606A9D /* WatsonRecording.swift */,
 				B4413F811D5049E0006907C2 /* TextToSpeech.swift */,
 				748D17F81D5AE4930072FBAA /* WatsonConvo.swift */,
+				B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */,
 				B49A26961D4A912100BB1813 /* Main.storyboard */,
 				B49A26991D4A912100BB1813 /* Assets.xcassets */,
 				B49A269B1D4A912100BB1813 /* LaunchScreen.storyboard */,
@@ -301,6 +305,13 @@
 				B49A268E1D4A912100BB1813 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4E7C7971D60EE6E0033A587 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +397,7 @@
 				B4413FFF1D53A16A006907C2 /* 18.png in Resources */,
 				B44140001D53A16A006907C2 /* 19.png in Resources */,
 				B44140011D53A16A006907C2 /* 20.png in Resources */,
+				B4E7C7991D60EF5C0033A587 /* SanFranciscoText-RegularG1.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
