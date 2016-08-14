@@ -223,6 +223,7 @@
 - (void)tappedBackButton
 {
   [self.view bringSubviewToFront:self.overview];
+  [self.view endEditing:YES];
   
   [UIView animateWithDuration:0.3 animations:^{
     self.overview.frame = Frame(0, 0, 769, 973);
