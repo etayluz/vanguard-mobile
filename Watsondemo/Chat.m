@@ -9,7 +9,7 @@
 #import "Chat.h"
 #import "AppDelegate.h"
 #import <AVFoundation/AVFoundation.h>
-#import "amex-Swift.h"
+#import "WatsonDemo-Swift.h"
 
 
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74235DA11D5BD25500606A9D /* WatsonRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74235DA01D5BD25500606A9D /* WatsonRecording.swift */; };
 		748D17C21D5AB1770072FBAA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D17C11D5AB1770072FBAA /* Alamofire.framework */; };
 		748D17C41D5AB1860072FBAA /* AlchemyDataNewsV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D17C31D5AB1860072FBAA /* AlchemyDataNewsV1.framework */; };
 		748D17C61D5AB18F0072FBAA /* AlchemyLanguageV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D17C51D5AB18F0072FBAA /* AlchemyLanguageV1.framework */; };
@@ -44,39 +43,20 @@
 		748D17F51D5AB76B0072FBAA /* AlchemyLanguageV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 748D17C51D5AB18F0072FBAA /* AlchemyLanguageV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		748D17F61D5AB76B0072FBAA /* AlchemyDataNewsV1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 748D17C31D5AB1860072FBAA /* AlchemyDataNewsV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		748D17F71D5AB76B0072FBAA /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 748D17C11D5AB1770072FBAA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		748D17F91D5AE4930072FBAA /* WatsonConvo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748D17F81D5AE4930072FBAA /* WatsonConvo.swift */; };
-		B4413F7D1D503C45006907C2 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = B4413F7C1D503C45006907C2 /* Chat.m */; };
-		B4413F821D5049E0006907C2 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4413F811D5049E0006907C2 /* TextToSpeech.swift */; };
-		B4413FEE1D53A16A006907C2 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FDA1D53A16A006907C2 /* 1.png */; };
-		B4413FEF1D53A16A006907C2 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FDB1D53A16A006907C2 /* 2.png */; };
-		B4413FF01D53A16A006907C2 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FDC1D53A16A006907C2 /* 3.png */; };
-		B4413FF11D53A16A006907C2 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FDD1D53A16A006907C2 /* 4.png */; };
-		B4413FF21D53A16A006907C2 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FDE1D53A16A006907C2 /* 5.png */; };
-		B4413FF31D53A16A006907C2 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FDF1D53A16A006907C2 /* 6.png */; };
-		B4413FF41D53A16A006907C2 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE01D53A16A006907C2 /* 7.png */; };
-		B4413FF51D53A16A006907C2 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE11D53A16A006907C2 /* 8.png */; };
-		B4413FF61D53A16A006907C2 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE21D53A16A006907C2 /* 9.png */; };
-		B4413FF71D53A16A006907C2 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE31D53A16A006907C2 /* 10.png */; };
-		B4413FF81D53A16A006907C2 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE41D53A16A006907C2 /* 11.png */; };
-		B4413FF91D53A16A006907C2 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE51D53A16A006907C2 /* 12.png */; };
-		B4413FFA1D53A16A006907C2 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE61D53A16A006907C2 /* 13.png */; };
-		B4413FFB1D53A16A006907C2 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE71D53A16A006907C2 /* 14.png */; };
-		B4413FFC1D53A16A006907C2 /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE81D53A16A006907C2 /* 15.png */; };
-		B4413FFD1D53A16A006907C2 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FE91D53A16A006907C2 /* 16.png */; };
-		B4413FFE1D53A16A006907C2 /* 17.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FEA1D53A16A006907C2 /* 17.png */; };
-		B4413FFF1D53A16A006907C2 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FEB1D53A16A006907C2 /* 18.png */; };
-		B44140001D53A16A006907C2 /* 19.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FEC1D53A16A006907C2 /* 19.png */; };
-		B44140011D53A16A006907C2 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = B4413FED1D53A16A006907C2 /* 20.png */; };
-		B44140041D53A987006907C2 /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = B44140031D53A987006907C2 /* Overlay.png */; };
 		B44140081D53B146006907C2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44140061D53B146006907C2 /* Fabric.framework */; };
 		B44140091D53B146006907C2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44140071D53B146006907C2 /* Crashlytics.framework */; };
-		B49A268F1D4A912100BB1813 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A268E1D4A912100BB1813 /* main.m */; };
-		B49A26921D4A912100BB1813 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A26911D4A912100BB1813 /* AppDelegate.m */; };
-		B49A26951D4A912100BB1813 /* AccountOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = B49A26941D4A912100BB1813 /* AccountOverview.m */; };
-		B49A26981D4A912100BB1813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49A26961D4A912100BB1813 /* Main.storyboard */; };
-		B49A269A1D4A912100BB1813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49A26991D4A912100BB1813 /* Assets.xcassets */; };
-		B49A269D1D4A912100BB1813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49A269B1D4A912100BB1813 /* LaunchScreen.storyboard */; };
 		B4E7C7991D60EF5C0033A587 /* SanFranciscoText-RegularG1.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */; };
+		B4E7C79C1D61059C0033A587 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C79B1D61059C0033A587 /* AppDelegate.m */; };
+		B4E7C79F1D6105A30033A587 /* AccountOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C79E1D6105A30033A587 /* AccountOverview.m */; };
+		B4E7C7A21D6105AB0033A587 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C7A11D6105AB0033A587 /* Chat.m */; };
+		B4E7C7A41D6105B40033A587 /* WatsonRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C7A31D6105B40033A587 /* WatsonRecording.swift */; };
+		B4E7C7A61D6105B80033A587 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C7A51D6105B80033A587 /* TextToSpeech.swift */; };
+		B4E7C7A81D6105BF0033A587 /* WatsonConvo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C7A71D6105BF0033A587 /* WatsonConvo.swift */; };
+		B4E7C7AA1D6105CB0033A587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7A91D6105CB0033A587 /* Assets.xcassets */; };
+		B4E7C7AF1D6105DF0033A587 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7C7AE1D6105DF0033A587 /* main.m */; };
+		B4E7C7DB1D61072E0033A587 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7D91D6107170033A587 /* Info.plist */; };
+		B4E7C7E01D6107690033A587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7DC1D6107690033A587 /* LaunchScreen.storyboard */; };
+		B4E7C7E11D6107690033A587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E7C7DE1D6107690033A587 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -110,7 +90,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		74235DA01D5BD25500606A9D /* WatsonRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatsonRecording.swift; sourceTree = "<group>"; };
 		748D17C11D5AB1770072FBAA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		748D17C31D5AB1860072FBAA /* AlchemyDataNewsV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyDataNewsV1.framework; path = Carthage/Build/iOS/AlchemyDataNewsV1.framework; sourceTree = SOURCE_ROOT; };
 		748D17C51D5AB18F0072FBAA /* AlchemyLanguageV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyLanguageV1.framework; path = Carthage/Build/iOS/AlchemyLanguageV1.framework; sourceTree = SOURCE_ROOT; };
@@ -129,11 +108,6 @@
 		748D17DF1D5AB7240072FBAA /* ToneAnalyzerV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToneAnalyzerV3.framework; path = Carthage/Build/iOS/ToneAnalyzerV3.framework; sourceTree = SOURCE_ROOT; };
 		748D17E11D5AB72C0072FBAA /* TradeoffAnalyticsV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TradeoffAnalyticsV1.framework; path = Carthage/Build/iOS/TradeoffAnalyticsV1.framework; sourceTree = SOURCE_ROOT; };
 		748D17E31D5AB7340072FBAA /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualRecognitionV3.framework; path = Carthage/Build/iOS/VisualRecognitionV3.framework; sourceTree = SOURCE_ROOT; };
-		748D17F81D5AE4930072FBAA /* WatsonConvo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatsonConvo.swift; sourceTree = "<group>"; };
-		B4413F7B1D503C45006907C2 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
-		B4413F7C1D503C45006907C2 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
-		B4413F801D5049E0006907C2 /* amex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "amex-Bridging-Header.h"; sourceTree = "<group>"; };
-		B4413F811D5049E0006907C2 /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		B4413FDA1D53A16A006907C2 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = amex/Dots/1.png; sourceTree = "<group>"; };
 		B4413FDB1D53A16A006907C2 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = amex/Dots/2.png; sourceTree = "<group>"; };
 		B4413FDC1D53A16A006907C2 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = amex/Dots/3.png; sourceTree = "<group>"; };
@@ -157,17 +131,23 @@
 		B44140031D53A987006907C2 /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Overlay.png; path = amex/Overlay.png; sourceTree = "<group>"; };
 		B44140061D53B146006907C2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		B44140071D53B146006907C2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
-		B49A268A1D4A912100BB1813 /* amex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amex.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B49A268E1D4A912100BB1813 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B49A26901D4A912100BB1813 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B49A26911D4A912100BB1813 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B49A26931D4A912100BB1813 /* AccountOverview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountOverview.h; sourceTree = "<group>"; };
-		B49A26941D4A912100BB1813 /* AccountOverview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountOverview.m; sourceTree = "<group>"; };
-		B49A26971D4A912100BB1813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B49A26991D4A912100BB1813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B49A269C1D4A912100BB1813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B49A269E1D4A912100BB1813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49A268A1D4A912100BB1813 /* WatsonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatsonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-RegularG1.otf"; path = "../../Downloads/SanFrancisco/SanFranciscoText-RegularG1.otf"; sourceTree = "<group>"; };
+		B4E7C79A1D61059C0033A587 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Watsondemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		B4E7C79B1D61059C0033A587 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Watsondemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		B4E7C79D1D6105A30033A587 /* AccountOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountOverview.h; path = Watsondemo/AccountOverview.h; sourceTree = SOURCE_ROOT; };
+		B4E7C79E1D6105A30033A587 /* AccountOverview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountOverview.m; path = Watsondemo/AccountOverview.m; sourceTree = SOURCE_ROOT; };
+		B4E7C7A01D6105AB0033A587 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chat.h; path = Watsondemo/Chat.h; sourceTree = SOURCE_ROOT; };
+		B4E7C7A11D6105AB0033A587 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chat.m; path = Watsondemo/Chat.m; sourceTree = SOURCE_ROOT; };
+		B4E7C7A31D6105B40033A587 /* WatsonRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatsonRecording.swift; path = Watsondemo/WatsonRecording.swift; sourceTree = SOURCE_ROOT; };
+		B4E7C7A51D6105B80033A587 /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextToSpeech.swift; path = Watsondemo/TextToSpeech.swift; sourceTree = SOURCE_ROOT; };
+		B4E7C7A71D6105BF0033A587 /* WatsonConvo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatsonConvo.swift; path = Watsondemo/WatsonConvo.swift; sourceTree = SOURCE_ROOT; };
+		B4E7C7A91D6105CB0033A587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Watsondemo/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		B4E7C7AD1D6105D60033A587 /* watson-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "watson-Bridging-Header.h"; path = "Watsondemo/watson-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		B4E7C7AE1D6105DF0033A587 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Watsondemo/main.m; sourceTree = SOURCE_ROOT; };
+		B4E7C7D91D6107170033A587 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Watsondemo/Info.plist; sourceTree = SOURCE_ROOT; };
+		B4E7C7DD1D6107690033A587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Watsondemo/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		B4E7C7DF1D6107690033A587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Watsondemo/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,7 +238,7 @@
 		B49A26811D4A912100BB1813 = {
 			isa = PBXGroup;
 			children = (
-				B49A268C1D4A912100BB1813 /* amex */,
+				B49A268C1D4A912100BB1813 /* WatsonDemo */,
 				B49A268B1D4A912100BB1813 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -266,43 +246,44 @@
 		B49A268B1D4A912100BB1813 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B49A268A1D4A912100BB1813 /* amex.app */,
+				B49A268A1D4A912100BB1813 /* WatsonDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B49A268C1D4A912100BB1813 /* amex */ = {
+		B49A268C1D4A912100BB1813 /* WatsonDemo */ = {
 			isa = PBXGroup;
 			children = (
 				B4E7C7971D60EE6E0033A587 /* Fonts */,
 				748D17C01D5AB12F0072FBAA /* Frameworks */,
-				B49A26901D4A912100BB1813 /* AppDelegate.h */,
-				B49A26911D4A912100BB1813 /* AppDelegate.m */,
-				B49A26931D4A912100BB1813 /* AccountOverview.h */,
-				B49A26941D4A912100BB1813 /* AccountOverview.m */,
-				B4413F7B1D503C45006907C2 /* Chat.h */,
-				B4413F7C1D503C45006907C2 /* Chat.m */,
-				74235DA01D5BD25500606A9D /* WatsonRecording.swift */,
-				B4413F811D5049E0006907C2 /* TextToSpeech.swift */,
-				748D17F81D5AE4930072FBAA /* WatsonConvo.swift */,
+				B4E7C79A1D61059C0033A587 /* AppDelegate.h */,
+				B4E7C79B1D61059C0033A587 /* AppDelegate.m */,
+				B4E7C79D1D6105A30033A587 /* AccountOverview.h */,
+				B4E7C79E1D6105A30033A587 /* AccountOverview.m */,
+				B4E7C7A01D6105AB0033A587 /* Chat.h */,
+				B4E7C7A11D6105AB0033A587 /* Chat.m */,
+				B4E7C7A31D6105B40033A587 /* WatsonRecording.swift */,
+				B4E7C7A51D6105B80033A587 /* TextToSpeech.swift */,
+				B4E7C7A71D6105BF0033A587 /* WatsonConvo.swift */,
+				B4E7C7DC1D6107690033A587 /* LaunchScreen.storyboard */,
+				B4E7C7DE1D6107690033A587 /* Main.storyboard */,
 				B4E7C7981D60EED10033A587 /* SanFranciscoText-RegularG1.otf */,
-				B49A26961D4A912100BB1813 /* Main.storyboard */,
-				B49A26991D4A912100BB1813 /* Assets.xcassets */,
-				B49A269B1D4A912100BB1813 /* LaunchScreen.storyboard */,
-				B49A269E1D4A912100BB1813 /* Info.plist */,
+				B4E7C7A91D6105CB0033A587 /* Assets.xcassets */,
+				B4E7C7D91D6107170033A587 /* Info.plist */,
 				B44140061D53B146006907C2 /* Fabric.framework */,
 				B44140071D53B146006907C2 /* Crashlytics.framework */,
 				B44140021D53A170006907C2 /* Dots */,
 				B49A268D1D4A912100BB1813 /* Supporting Files */,
-				B4413F801D5049E0006907C2 /* amex-Bridging-Header.h */,
 			);
+			name = WatsonDemo;
 			path = amex;
 			sourceTree = "<group>";
 		};
 		B49A268D1D4A912100BB1813 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B49A268E1D4A912100BB1813 /* main.m */,
+				B4E7C7AD1D6105D60033A587 /* watson-Bridging-Header.h */,
+				B4E7C7AE1D6105DF0033A587 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -317,9 +298,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B49A26891D4A912100BB1813 /* amex */ = {
+		B49A26891D4A912100BB1813 /* WatsonDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B49A26A11D4A912100BB1813 /* Build configuration list for PBXNativeTarget "amex" */;
+			buildConfigurationList = B49A26A11D4A912100BB1813 /* Build configuration list for PBXNativeTarget "WatsonDemo" */;
 			buildPhases = (
 				B49A26861D4A912100BB1813 /* Sources */,
 				B49A26871D4A912100BB1813 /* Frameworks */,
@@ -331,9 +312,9 @@
 			);
 			dependencies = (
 			);
-			name = amex;
+			name = WatsonDemo;
 			productName = amex;
-			productReference = B49A268A1D4A912100BB1813 /* amex.app */;
+			productReference = B49A268A1D4A912100BB1813 /* WatsonDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -350,7 +331,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B49A26851D4A912100BB1813 /* Build configuration list for PBXProject "amex" */;
+			buildConfigurationList = B49A26851D4A912100BB1813 /* Build configuration list for PBXProject "WatsonDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -363,7 +344,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B49A26891D4A912100BB1813 /* amex */,
+				B49A26891D4A912100BB1813 /* WatsonDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -373,31 +354,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B49A269D1D4A912100BB1813 /* LaunchScreen.storyboard in Resources */,
-				B49A269A1D4A912100BB1813 /* Assets.xcassets in Resources */,
-				B49A26981D4A912100BB1813 /* Main.storyboard in Resources */,
-				B4413FEE1D53A16A006907C2 /* 1.png in Resources */,
-				B4413FEF1D53A16A006907C2 /* 2.png in Resources */,
-				B4413FF01D53A16A006907C2 /* 3.png in Resources */,
-				B4413FF11D53A16A006907C2 /* 4.png in Resources */,
-				B4413FF21D53A16A006907C2 /* 5.png in Resources */,
-				B4413FF31D53A16A006907C2 /* 6.png in Resources */,
-				B4413FF41D53A16A006907C2 /* 7.png in Resources */,
-				B4413FF51D53A16A006907C2 /* 8.png in Resources */,
-				B4413FF61D53A16A006907C2 /* 9.png in Resources */,
-				B4413FF71D53A16A006907C2 /* 10.png in Resources */,
-				B4413FF81D53A16A006907C2 /* 11.png in Resources */,
-				B4413FF91D53A16A006907C2 /* 12.png in Resources */,
-				B4413FFA1D53A16A006907C2 /* 13.png in Resources */,
-				B4413FFB1D53A16A006907C2 /* 14.png in Resources */,
-				B4413FFC1D53A16A006907C2 /* 15.png in Resources */,
-				B4413FFD1D53A16A006907C2 /* 16.png in Resources */,
-				B4413FFE1D53A16A006907C2 /* 17.png in Resources */,
-				B44140041D53A987006907C2 /* Overlay.png in Resources */,
-				B4413FFF1D53A16A006907C2 /* 18.png in Resources */,
-				B44140001D53A16A006907C2 /* 19.png in Resources */,
-				B44140011D53A16A006907C2 /* 20.png in Resources */,
+				B4E7C7AA1D6105CB0033A587 /* Assets.xcassets in Resources */,
+				B4E7C7E11D6107690033A587 /* Main.storyboard in Resources */,
+				B4E7C7E01D6107690033A587 /* LaunchScreen.storyboard in Resources */,
 				B4E7C7991D60EF5C0033A587 /* SanFranciscoText-RegularG1.otf in Resources */,
+				B4E7C7DB1D61072E0033A587 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,33 +385,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B49A26951D4A912100BB1813 /* AccountOverview.m in Sources */,
-				748D17F91D5AE4930072FBAA /* WatsonConvo.swift in Sources */,
-				B4413F821D5049E0006907C2 /* TextToSpeech.swift in Sources */,
-				74235DA11D5BD25500606A9D /* WatsonRecording.swift in Sources */,
-				B4413F7D1D503C45006907C2 /* Chat.m in Sources */,
-				B49A26921D4A912100BB1813 /* AppDelegate.m in Sources */,
-				B49A268F1D4A912100BB1813 /* main.m in Sources */,
+				B4E7C79F1D6105A30033A587 /* AccountOverview.m in Sources */,
+				B4E7C7A41D6105B40033A587 /* WatsonRecording.swift in Sources */,
+				B4E7C7A21D6105AB0033A587 /* Chat.m in Sources */,
+				B4E7C7A81D6105BF0033A587 /* WatsonConvo.swift in Sources */,
+				B4E7C79C1D61059C0033A587 /* AppDelegate.m in Sources */,
+				B4E7C7A61D6105B80033A587 /* TextToSpeech.swift in Sources */,
+				B4E7C7AF1D6105DF0033A587 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B49A26961D4A912100BB1813 /* Main.storyboard */ = {
+		B4E7C7DC1D6107690033A587 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B49A26971D4A912100BB1813 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B49A269B1D4A912100BB1813 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B49A269C1D4A912100BB1813 /* Base */,
+				B4E7C7DD1D6107690033A587 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B4E7C7DE1D6107690033A587 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4E7C7DF1D6107690033A587 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -550,13 +511,13 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = amex/Info.plist;
+				INFOPLIST_FILE = WatsonDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.amex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsondemo;
+				PRODUCT_NAME = WatsonDemo;
 				PROVISIONING_PROFILE = "65b7451a-6157-4c66-8072-d40148313568";
-				SWIFT_OBJC_BRIDGING_HEADER = "amex/amex-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Watsondemo/watson-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -574,13 +535,13 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = amex/Info.plist;
+				INFOPLIST_FILE = WatsonDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.amex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsondemo;
+				PRODUCT_NAME = WatsonDemo;
 				PROVISIONING_PROFILE = "b199db04-550e-45bb-8ee6-7fbf8ecc3ad3";
-				SWIFT_OBJC_BRIDGING_HEADER = "amex/amex-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Watsondemo/watson-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
@@ -588,7 +549,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B49A26851D4A912100BB1813 /* Build configuration list for PBXProject "amex" */ = {
+		B49A26851D4A912100BB1813 /* Build configuration list for PBXProject "WatsonDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B49A269F1D4A912100BB1813 /* Debug */,
@@ -597,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B49A26A11D4A912100BB1813 /* Build configuration list for PBXNativeTarget "amex" */ = {
+		B49A26A11D4A912100BB1813 /* Build configuration list for PBXNativeTarget "WatsonDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B49A26A21D4A912100BB1813 /* Debug */,
