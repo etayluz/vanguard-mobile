@@ -730,8 +730,11 @@ if (self.done) {
     else {
       if ([selectedOptionButton.titleLabel.text isEqualToString:@"Click to view summary plan"]) {
         [self.overview setImage:[UIImage imageNamed:@"SummaryPlan"] forState:UIControlStateNormal];
-        self.overview.userInteractionEnabled = NO;
+        [self.overview setImage:[UIImage imageNamed:@"SummaryPlan"] forState:UIControlStateSelected];
+        [self.overview setImage:[UIImage imageNamed:@"SummaryPlan"] forState:UIControlStateHighlighted];
+//        self.overview.userInteractionEnabled = NO;
         [self tappedBackButton];
+        return;
       } else if ([selectedOptionButton.titleLabel.text isEqualToString:@"Submit"]) {
         [self addWatsonChat:@"Congratulations!\n\nYou’ve been approved! Your card will be mailed to you in 3-5 business days. In the meantime, learn about your instant account number - you can begin using a $1,000 line of credit at Delta.com today." waiting:NO];
       } else {
@@ -739,7 +742,7 @@ if (self.done) {
       }
       
       userIcon = [UIImageView new];
-      userIcon.frame = Frame(725 - 60, self.topOffset - 90, 70, 70);
+      userIcon.frame = Frame(725 - 60, Denormalize(optionButton.frame.origin.y) - 15, 70, 70);
       userIcon.contentMode = UIViewContentModeScaleAspectFill;
       userIcon.image = [UIImage imageNamed:@"User"];
       userIcon.alpha = 0;
