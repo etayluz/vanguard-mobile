@@ -28,6 +28,7 @@
 @property AVSpeechSynthesizer *synth;
 @property BOOL      isAudioOn;
 @property BOOL      isAudioPlaying;
+@property BOOL      isMicOn;
 @property UIView *waitingMessage;
 @property int textIndex;
 @property int entranceCount;
@@ -37,6 +38,7 @@
 @property int            animationIndex;
 @property UIButton *overview;
 @property UIButton *backButton;
+@property UIButton *micButton;
 @property int scrollViewHeight;
 @end
 
@@ -67,8 +69,16 @@
 //  ShowViewBorders(self.backButton);
   [self.view addSubview:self.backButton];
   
+  self.micButton = [UIButton new];
+  self.micButton.frame = Frame(0, 930, 65, 44);
+  [self.micButton addTarget:self action:@selector(tappedMicButton) forControlEvents:UIControlEventTouchUpInside];
+  self.micButton.backgroundColor = [UIColor clearColor];
+  //  ShowViewBorders(self.backButton);
+  [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateNormal];
+  [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateSelected];
+  [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateHighlighted];
+  [self.view addSubview:self.micButton];
   
-
   
   self.topOffset = 40;
   self.scrollView = [UIScrollView new];
@@ -220,6 +230,23 @@
   [self.view addSubview:self.overview];
   [self.view bringSubviewToFront:self.overview];
 
+}
+
+- (void)tappedMicButton
+{
+  self.isMicOn = !self.isMicOn;
+  
+  if (self.isMicOn) {
+    [self.micButton setImage:[UIImage imageNamed:@"MicOn"] forState:UIControlStateNormal];
+    [self.micButton setImage:[UIImage imageNamed:@"MicOn"] forState:UIControlStateSelected];
+    [self.micButton setImage:[UIImage imageNamed:@"MicOn"] forState:UIControlStateHighlighted];
+  } else {
+    [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateNormal];
+    [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateSelected];
+    [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateHighlighted];
+  }
+  
+  
 }
 
 - (void)tappedBackButton
