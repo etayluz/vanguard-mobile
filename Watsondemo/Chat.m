@@ -20,6 +20,7 @@
 @property UITextField *bottomTextField;
 @property UIImageView *topTextBox;
 @property BOOL done;
+@property BOOL hasStartedChat;
 @property NSInteger topOffset;
 @property UIScrollView   *scrollView;
 @property NSData *queuedAudio;
@@ -206,7 +207,7 @@
 //      [self addWatsonChat:watsonResponse waiting:NO];
 //    });
 //  }
-  [self sendUserText:@"Hi!"];
+  
   
   self.overview = [UIButton new];
   
@@ -237,6 +238,10 @@
 {
   [UIView animateWithDuration:0.3 animations:^{
     self.overview.frame = Frame(-769, 0, 769, 973);
+    if (self.hasStartedChat == NO) {
+      self.hasStartedChat = YES;
+      [self sendUserText:@"Hi!"];
+    }
   }];
   
 }
@@ -499,7 +504,7 @@ if (self.done) {
     [messageBouble addSubview:corner];
     
     UIImageView *userIcon = [UIImageView new];
-    userIcon.frame = Frame(725 - 60, self.topOffset, 70, 70);
+    userIcon.frame = Frame(725 - 60, self.topOffset - 15, 70, 70);
     userIcon.contentMode = UIViewContentModeScaleAspectFill;
     userIcon.image = [UIImage imageNamed:@"User"];
     [self.scrollView addSubview:userIcon];
@@ -518,7 +523,7 @@ if (self.done) {
     }];
   });
   
-  [self addWatsonChat:@"Give me a sec..." waiting:YES];
+//  [self addWatsonChat:@"Give me a sec..." waiting:YES];
   [self sendUserText:text];
   self.topTextField.text = @"";
 }
@@ -636,6 +641,7 @@ if (self.done) {
     
     int leftOffset = 120;
     self.optionButtons = [NSMutableArray new];
+    self.topOffset += 15;
     for (NSString *option in options) {
       
       UIButton *optionButton = [UIButton new];
@@ -714,6 +720,9 @@ if (self.done) {
 
 -(void)tappedOptionButton:(UIButton*)selectedOptionButton {
   [self dismissKeyboard];
+  
+  UIImageView *userIcon;
+  
   for (UIButton *optionButton in self.optionButtons) {
     if (optionButton != selectedOptionButton) {
       [optionButton removeFromSuperview];
@@ -728,14 +737,16 @@ if (self.done) {
       } else {
         [self sendUserText:optionButton.titleLabel.text];
       }
+      
+      userIcon = [UIImageView new];
+      userIcon.frame = Frame(725 - 60, self.topOffset - 90, 70, 70);
+      userIcon.contentMode = UIViewContentModeScaleAspectFill;
+      userIcon.image = [UIImage imageNamed:@"User"];
+      userIcon.alpha = 0;
+      [self.scrollView addSubview:userIcon];
     }
     
-    UIImageView *userIcon = [UIImageView new];
-    userIcon.frame = Frame(725 - 60, self.topOffset - 90, 70, 70);
-    userIcon.contentMode = UIViewContentModeScaleAspectFill;
-    userIcon.image = [UIImage imageNamed:@"User"];
-    userIcon.alpha = 0;
-    [self.scrollView addSubview:userIcon];
+
     
     [UIView animateWithDuration:0.5 animations:^{
       optionButton.frame = Frame(Denormalize(self.scrollView.frame.size.width - optionButton.frame.size.width - 120),
@@ -746,6 +757,8 @@ if (self.done) {
       [optionButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
       optionButton.userInteractionEnabled = NO;
       userIcon.alpha = 1;
+      
+      self.topOffset += 10;
       
     }];
   }
