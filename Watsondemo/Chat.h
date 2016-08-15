@@ -10,5 +10,5 @@
 
 @interface Chat : UIViewController
 -(void)addWatsonChat:(NSString*)text waiting:(BOOL)isWaiting;
-
+-(void)addUserChat:(NSString*)text;
 @end

@@ -14,7 +14,7 @@
 
 
 
-@interface Chat () <UITextFieldDelegate, AVAudioPlayerDelegate>
+@interface Chat () <UITextFieldDelegate, AVAudioPlayerDelegate, AVAudioRecorderDelegate>
 @property UIButton *accountButton;
 @property UITextField *topTextField;
 @property UITextField *bottomTextField;
@@ -40,6 +40,8 @@
 @property UIButton *backButton;
 @property UIButton *micButton;
 @property int scrollViewHeight;
+@property AVAudioRecorder *recorder;
+@property WatsonRecording *watsonRecording;
 @end
 
 @implementation Chat
@@ -229,6 +231,8 @@
   
   [self.view addSubview:self.overview];
   [self.view bringSubviewToFront:self.overview];
+  
+  self.watsonRecording = [[WatsonRecording alloc] initWithChatViewController:self];
 
 }
 
@@ -240,13 +244,59 @@
     [self.micButton setImage:[UIImage imageNamed:@"MicOn"] forState:UIControlStateNormal];
     [self.micButton setImage:[UIImage imageNamed:@"MicOn"] forState:UIControlStateSelected];
     [self.micButton setImage:[UIImage imageNamed:@"MicOn"] forState:UIControlStateHighlighted];
+    self.isAudioPlaying = NO;
+    [self.player stop];
+    [self.watsonRecording startRecording];
   } else {
     [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateNormal];
     [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateSelected];
     [self.micButton setImage:[UIImage imageNamed:@"MicOff"] forState:UIControlStateHighlighted];
+    [self.watsonRecording finishRecordingWithSuccess:YES];
+//    [self playRecording];
   }
   
   
+}
+
+-(void)startRecording
+{
+  [self.player stop];
+  
+  // Set the audio file
+  NSArray *pathComponents = [NSArray arrayWithObjects:
+                             [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+                             [NSString stringWithFormat:@"Speech.mp4"], nil];
+  NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
+  
+  // Setup audio session
+  AVAudioSession *session = [AVAudioSession sharedInstance];
+  [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+  [session setActive:YES error:nil];
+  
+  // Define the recorder setting
+  NSMutableDictionary *recordSetting = [[NSMutableDictionary alloc] init];
+  
+  [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
+  [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
+  [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
+  
+  // Initiate and prepare the recorder
+  
+  self.recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL settings:recordSetting error:NULL];
+  //[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryRecord error:NULL];
+  self.recorder.delegate = self;
+  self.recorder.meteringEnabled = YES;
+  [self.recorder prepareToRecord];
+  [self.recorder record];
+}
+
+
+
+-(void)stopRecording
+{
+  [self.recorder stop];
+  AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+  [audioSession setActive:NO error:nil];
 }
 
 - (void)tappedBackButton

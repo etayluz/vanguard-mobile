@@ -33,8 +33,12 @@ var recordingSession: AVAudioSession!
 @objc class WatsonRecording : NSObject, AVAudioRecorderDelegate {
 
     var answer = ""
-
-    
+    let chatViewController : Chat
+  
+    init(chatViewController: Chat) {
+      self.chatViewController = chatViewController
+    }
+  
     func getDocumentsDirectory() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentsDirectory = paths[0]
@@ -98,6 +102,7 @@ var recordingSession: AVAudioSession!
                 let answer = results.last?.alternatives.last?.transcript as String!
                 if (answer != nil) {
                     print(answer)
+                    self.chatViewController.addUserChat(answer)
    //ETAY           self.textView.text = answer
    //ETAY           self.rightButton.sendActionsForControlEvents(.TouchUpInside)
    
