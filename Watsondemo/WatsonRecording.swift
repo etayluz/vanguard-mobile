@@ -37,6 +37,25 @@ var recordingSession: AVAudioSession!
   
     init(chatViewController: Chat) {
       self.chatViewController = chatViewController
+      
+      recordingSession = AVAudioSession.sharedInstance()
+      
+      do {
+        try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        try recordingSession.setActive(true)
+        recordingSession.requestRecordPermission() { (allowed: Bool) -> Void in
+          dispatch_async(dispatch_get_main_queue()) {
+            if allowed {
+              // success
+            } else {
+              // failed to record!
+            }
+          }
+        }
+      } catch {
+        // failed to record!
+      }
+
     }
   
     func getDocumentsDirectory() -> String {
