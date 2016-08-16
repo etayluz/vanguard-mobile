@@ -518,7 +518,7 @@
 				INFOPLIST_FILE = WatsonDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsondemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.amex;
 				PRODUCT_NAME = WatsonDemo;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Watsondemo/watson-Bridging-Header.h";
@@ -543,7 +543,7 @@
 				INFOPLIST_FILE = WatsonDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsondemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.amex;
 				PRODUCT_NAME = WatsonDemo;
 				PROVISIONING_PROFILE = "99d86a11-428a-4454-b199-ad168dcafd0f";
 				SWIFT_OBJC_BRIDGING_HEADER = "Watsondemo/watson-Bridging-Header.h";
